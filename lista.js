@@ -12,17 +12,14 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12
 // y copiamos el fragmento de código que nos proporciona Firebase, sin las etiquetas <script>.
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    //Esta información corresponde a mi cuenta de firebase
-    //Cada proyecto tiene su propia configuración única
-    //Reemplazá los valores por los de tu propio proyecto de Firebase si estás siguiendo este ejemplo
-    apiKey: "INGRESA TU API KEY",
-    authDomain: "INGRESA TU AUTH DOMAIN",
-    databaseURL: "INGRESA TU DATABASE URL",
-    projectId: "INGRESA TU PROJECT ID",
-    storageBucket: "INGRESA TU STORAGE BUCKET",
-    messagingSenderId: "INGRESA TU MESSAGING SENDER ID",
-    appId: "INGRESA TU APP ID"
-};
+    apiKey: "AIzaSyBYdKwms_YS97E6BUuSuGdSoRy1dD4lUr4",
+    authDomain: "proyectohuertalmms.firebaseapp.com",
+    databaseURL: "https://proyectohuertalmms-default-rtdb.firebaseio.com",
+    projectId: "proyectohuertalmms",
+    storageBucket: "proyectohuertalmms.firebasestorage.app",
+    messagingSenderId: "940351629789",
+    appId: "1:940351629789:web:b26125b82bb54d0c23ee34"
+  };
 
 // Inicializamos la app de firebase
 const app = initializeApp(firebaseConfig);
@@ -30,27 +27,26 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 //Referenciamos el elemento del DOM donde mostraremos la lista de tareas
-let tabla = document.querySelector(".tabla-estudiantes");
+let tabla = document.querySelector(".tabla-huerta");
 
 // 🔹 Creamos una referencia a la rama "estudiantes"
-const refEstudiantes = ref(db, "estudiantes");
+const refHuerta = ref(db, "huerta");
 
 // 🔹 Escuchamos los cambios en tiempo real en la rama "estudiantes
 // La función onValue se ejecuta cada vez que hay un cambio en los datos de la referencia especificada
-onValue(refEstudiantes, (datos) => {
+onValue(refHuerta, (datos) => {
     console.log(datos)
     //Obtenemos la información de los estudiantes
-    let estudiantes = datos.val();
+    let DatosHuerta = datos.val();
     //Limpiamos la lista antes de actualizarla
     tabla.innerHTML = "";
     //Recorremos los datos obtenidos de los estudiantes
-    for (let dni in estudiantes) {
+    for (let dni in DatosHuerta) {
         tabla.innerHTML += `
         <tr>
             <td>${dni}</td>
-            <td>${estudiantes[dni].apellido}</td>
-            <td>${estudiantes[dni].nombre}</td>
-            <td>${estudiantes[dni].edad}</td>
+            <td>${DatosHuerta[dni].apellido}</td>
+            <td>${DatosHuerta[dni].nombre}</td>
         </tr>
         `;
         

@@ -1,127 +1,38 @@
-/* ------------------------------
-   ESTILO AESTHETIC PARA HUERTA
-   ------------------------------ */
-
-/* Paleta de colores:
-   Verde salvia: #A3B18A
-   Verde oliva: #588157
-   Tierra: #DAD7CD
-   Marrón suave: #3A5A40
-   Blanco roto: #F6F6F2
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@500&display=swap');
-
-:root {
-  --verde-salvia: #A3B18A;
-  --verde-oliva: #588157;
-  --tierra: #DAD7CD;
-  --marron: #3A5A40;
-  --blanco-roto: #F6F6F2;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background-color: var(--blanco-roto);
-  font-family: 'Quicksand', sans-serif;
-  color: var(--marron);
-  line-height: 1.7;
-  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #eaf7e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-/* ENCABEZADO */
-header {
-  background: linear-gradient(to right, var(--verde-salvia), var(--verde-oliva));
-  color: var(--blanco-roto);
-  text-align: center;
-  padding: 3rem 1rem;
+.card {
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  border-left: 6px solid #4caf50;
 }
 
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  letter-spacing: 1px;
+.card h2 {
+  margin-top: 0;
+  color: #2e7d32;
 }
 
-header p {
-  font-size: 1.1rem;
-  opacity: 0.9;
+.dato {
+  margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* CONTENEDOR PRINCIPAL */
-main {
-  max-width: 900px;
-  margin: 3rem auto;
-  background: var(--tierra);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+.label {
+  font-weight: bold;
+  color: #3a3a3a;
 }
 
-/* SECCIONES */
-section {
-  margin-bottom: 2.5rem;
-}
-
-section h2 {
-  font-family: 'Playfair Display', serif;
-  color: var(--verde-oliva);
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-section p {
-  font-size: 1.05rem;
-  color: var(--marron);
-}
-
-/* BOTONES */
-button, .btn {
-  background-color: var(--verde-oliva);
-  color: var(--blanco-roto);
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover, .btn:hover {
-  background-color: var(--marron);
-  transform: translateY(-2px);
-}
-
-/* IMÁGENES */
-img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 1rem 0;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-/* PIE DE PÁGINA */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--verde-oliva);
-  margin-top: 3rem;
-  opacity: 0.8;
-}
-
-footer a {
-  color: var(--marron);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-footer a:hover {
-  color: var(--verde-oliva);
+.valor {
+  color: #2e7d32;
 }
