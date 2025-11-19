@@ -1,38 +1,64 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #eaf7e1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #e8f5e1;
+    color: #2e4a24;
 }
 
-.card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 25px;
-  width: 300px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-  border-left: 6px solid #4caf50;
+header {
+    background: linear-gradient(135deg, #6fbf73, #4a8c52);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.25);
 }
 
-.card h2 {
-  margin-top: 0;
-  color: #2e7d32;
+header h1 {
+    margin: 0;
+    font-size: 2rem;
 }
 
-.dato {
-  margin: 12px 0;
-  display: flex;
-  justify-content: space-between;
+.contenedor {
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
 }
 
-.label {
-  font-weight: bold;
-  color: #3a3a3a;
+.rojo {
+    background: #ffb3b3;
+    border-left: 10px solid #ff4d4d;
 }
 
-.valor {
-  color: #2e7d32;
+.amarillo {
+    background: #fff4b3;
+    border-left: 10px solid #e6c200;
+}
+
+.verde {
+    background: #c9f7c2;
+    border-left: 10px solid #48a34c;
+}
+
+.datos p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.datos span {
+    font-weight: bold;
+}
+
+
+.mensaje-alerta {
+    color: #c62828;
+}
+
+.mensaje-bien {
+    color: #2e7d32;
 }

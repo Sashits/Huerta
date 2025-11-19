@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huerta</title>
+    <title>Datos de Huerta</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="form">
-        <h1>Agregar cosecha nueva</h1>
-        <input type="text" name="planta" id="planta" placeholder="Planta" />
-        <input type="text" id="humedad" placeholder="Humedad" />
-        <input type="text" id="temperatura" placeholder="Temperatura" />
-        <input type="number" id="edad" placeholder="Edad" />  
-        <input type="number" name="" id="nota" placeholder="Ingresa la nota">  
-        <button id="agregar">Agregar</button>
-    </div>
-</body>
-<script src="db.js" type="module"></script>
 
+    <header>
+        <h1> Analiza tu Huerta 🌱</h1>
+    </header>
+
+    <div class="contenedor" id="card">
+        <h2>Datos de tu huerta</h2>
+
+        <div class="datos">
+            <p> Humedad del suelo: <span id="suelo">--</span>%</p>
+            <p> Humedad del aire: <span id="aire">--</span>%</p>
+            <p> Temperatura: <span id="temperatura">--</span>°C</p>
+        </div>
+      <p id="mensajeSuelo" class="mensaje"></p>
+    </div>
+
+</body>
+<script src="script.js"></script>
 </html>
